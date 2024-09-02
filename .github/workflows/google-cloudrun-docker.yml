@@ -35,10 +35,10 @@ on:
       - '"main"'
 
 env:
-  PROJECT_ID: 'taipeihackathon' # TODO: update to your Google Cloud project ID
-  REGION: 'asia-east1-a	' # TODO: update to your region
-  SERVICE: 'stray-tracker' # TODO: update to your service name
-  WORKLOAD_IDENTITY_PROVIDER: 'projects/322913925037/locations/global/workloadIdentityPools/github/providers/my-repo' # TODO: update to your workload identity provider
+  PROJECT_ID: 'taipeihackathon'
+  REGION: 'asia-east1-a'
+  SERVICE: 'stray-tracker'
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/322913925037/locations/global/workloadIdentityPools/github/providers/my-repo'
 
 jobs:
   deploy:
