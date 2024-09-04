@@ -35,7 +35,7 @@ on:
 
 env:
   PROJECT_ID: 'taipeihackathon'
-  REGION: 'asia-east1-a'
+  REGION: 'asia-east1'
   SERVICE: 'stray-tracker'
   WORKLOAD_IDENTITY_PROVIDER: 'projects/322913925037/locations/global/workloadIdentityPools/github/providers/my-repo'
 
