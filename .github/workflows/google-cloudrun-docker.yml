@@ -75,7 +75,7 @@ jobs:
       # If you already have a container image, you can omit these steps.
       - name: 'Authenticate Docker with gcloud'
         run: |
-          gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin asia-east1-docker.pkg.dev
+          gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://asia-east1-docker.pkg.dev
 
       - name: 'Build and Push Container'
         run: |-
