@@ -36,7 +36,7 @@ on:
 
 env:
   PROJECT_ID: 'taipeihackathon'
-  REGION: 'global'
+  REGION: 'asia-east1'
   SERVICE: 'stray-tracker'
 
 jobs:
