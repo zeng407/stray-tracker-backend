@@ -36,6 +36,6 @@ RUN composer install
 #ENV PATH $PATH:/google-cloud-sdk/bin
 
 # migrate database
-RUN php artisan migrate
+RUN php artisan migrate --force
 
 ENTRYPOINT ["php", "artisan", "octane:frankenphp"]
