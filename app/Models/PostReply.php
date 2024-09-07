@@ -23,6 +23,6 @@ class PostReply extends Model
         'country',
         'city',
         'district',
-        'street',
+        'address',
     ];
 }
