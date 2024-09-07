@@ -23,7 +23,7 @@ class Post extends Model
         'country',
         'city',
         'district',
-        'street',
+        'address',
     ];
 
     public function post_replies()
