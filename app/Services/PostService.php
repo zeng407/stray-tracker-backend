@@ -19,7 +19,7 @@ class PostService
             PostTitleCriterion::class,
             PostCityCriterion::class,
         ];
-        $query = Post::query();
+        $query = Post::query()->orderBy('created_at', 'desc');
 
         if(!empty($criteria)) {
             foreach($criteria as $key => $value) {
