@@ -6,19 +6,19 @@ namespace App\Criterions\Post;
 use App\Criterions\CriterionInterface;
 use Illuminate\Database\Eloquent\Builder;
 
-class PostCityCriterion implements CriterionInterface
+class PostDistrictCriterion implements CriterionInterface
 {
     static function getKey(): string
     {
-        return 'city';
+        return 'district';
     }
 
     static function apply(Builder $query, $value = null): Builder
     {
         if(is_array($value)) {
-            return $query->whereIn('city', $value);
+            return $query->whereIn('district', $value);
         }else if(is_string($value)) {
-            return $query->where('city', $value);
+            return $query->where('district', $value);
         }
     }
 }
