@@ -22,6 +22,12 @@ class PostReplyResource extends JsonResource
             'content' => $this->content,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'gps_latitude' => $this->gps_latitude,
+            'gps_longitude' => $this->gps_longitude,
+            'country' => $this->country,
+            'city' => $this->city,
+            'district' => $this->district,
+            'address' => $this->address,
             'files' => FileResource::collection($this->files),
         ];
     }
