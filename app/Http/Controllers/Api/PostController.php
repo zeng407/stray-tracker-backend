@@ -61,8 +61,8 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $data = $request->validate([
-            'user_id' => 'nullable|string|max:128',
-            'title' => 'required|string|max:30',
+            'user_id' => 'required|string|max:128',
+            'title' => 'nullable|string|max:30',
             'content' => 'nullable|string|max:1000',
             'country' => 'nullable|string|max:30',
             'city' => 'nullable|string|max:30',
@@ -76,7 +76,9 @@ class PostController extends Controller
             'deleted_files.*' => 'nullable|string',
         ]);
 
-        // todo: check permission
+        if($post->user_id !== $data['user_id']) {
+            return response()->json(['message' => 'Permission denied'], 403);
+        }
 
         logger($data);
         $post = $this->postService->updatePost($post, $data);
