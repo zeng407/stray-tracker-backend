@@ -22,9 +22,9 @@ class PostController extends Controller
     {
         $criteria = $request->validate([
             'title' => 'nullable|string|max:30',
-            'country' => 'nullable|string|max:30',
-            'city' => 'nullable|string|max:30',
-            'district' => 'nullable|string|max:30',
+            'country' => 'nullable|max:30',
+            'city' => 'nullable|max:30',
+            'district' => 'nullable|max:30',
             'page' => 'nullable|integer',
             'per_page' => 'nullable|integer|max:30',
         ]);

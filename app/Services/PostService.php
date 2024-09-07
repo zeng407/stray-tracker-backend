@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\Post;
 use App\Criterions\Post\PostTitleCriterion;
 use App\Criterions\Post\PostCityCriterion;
+use App\Criterions\Post\PostDistrictCriterion;
 use App\Criterions\PostReply\PostIdCriterion;
 use App\Helpers\Locker;
 use App\Models\PostReply;
@@ -18,6 +19,7 @@ class PostService
         $allowCriteria = [
             PostTitleCriterion::class,
             PostCityCriterion::class,
+            PostDistrictCriterion::class,
         ];
         $query = Post::query()->orderBy('created_at', 'desc');
 
