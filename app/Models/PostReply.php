@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Post extends Model
+class PostReply extends Model
 {
-    use SoftDeletes;
     use HasFactory;
+    use SoftDeletes;
     use HasFiles;
 
     protected $fillable = [
         'user_id',
         'user_name',
-        'title',
+        'floor',
         'content',
         'gps_latitude',
         'gps_longitude',
@@ -25,9 +25,4 @@ class Post extends Model
         'district',
         'street',
     ];
-
-    public function post_replies()
-    {
-        return $this->hasMany(PostReply::class);
-    }
 }
